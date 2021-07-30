@@ -16,7 +16,7 @@ const hash = (size: number, charSet: string[]): string => {
   const chars = charSet
     .map(chars => {
       const count = Math.ceil(Math.random() * (size / charSet.length))
-      return [...Array.from({ length: count })].map(() => choice(chars)).join('');
+      return [...Array(count)].map(() => choice(chars)).join('');
     })
     .join('');
   return chars + hash(size - chars.length, charSet);
