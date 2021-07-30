@@ -1,34 +1,53 @@
-# typescript-library-template
+# password-generator
 
-This is a template repository for developing libraries for Browser/Node.js with TypeScript.
+[![Github](https://img.shields.io/github/followers/Karibash?label=Follow&logo=github&style=social)](https://github.com/Karibash?tab=followers)
+[![Twitter](https://img.shields.io/twitter/follow/Karibash?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=Karibash)
 
-## How to publish to npm
+A simple password generation helper function.
 
-Rewrite the following items in package.json accordingly.
+## 👏 Getting Started
 
-* name
-* description
-* keywords
-* repository
-* author
-* bugs
-* homepage
+The basic usage is as follows:
 
-Use the following command to confirm that TypeScript to JavaScript compiles successfully.
+```typescript
+import password from '@karibash/password-generator';
 
-```bash
-$ npm run build
+console.log(password(9));
+// -> C_Tpmf45L
 ```
 
-Tag the commit with the following command before publishing to npm.
+By specifying a character array as the second argument, you can change the characters to be used during generation.
+At least one character from each array will be used.
 
-```bash
-$ git tag -a v1.0.0
-$ git push origin tags/v1.0.0
+You can change the string to be used when generating by doing the following:
+```typescript
+import password, { alphabetLowercase, alphabetUppercase } from '@karibash/password-generator';
+
+const charSet = [
+  alphabetLowercase,
+  alphabetUppercase,
+];
+console.log(password(9, charSet));
 ```
 
-Finally, use the following command to publish the tagged commit to NPM.
-
-```bash
-$ npm run publish
+By default, a string containing uppercase and lowercase letters, numbers, and symbols will be generated.
+```typescript
+const defaultCharSet = [
+  alphabetLowercase,
+  alphabetUppercase,
+  digits,
+  sign,
+];
 ```
+
+## 🚀 Installation
+
+```
+$ npm install @karibash/password-generator
+```
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome.
+
+Feel free to check [issues page](https://github.com/Karibash/password-generator/issues) if you want to contribute.
