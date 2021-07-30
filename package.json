@@ -1,9 +1,11 @@
 {
-  "name": "typescript-library-template",
+  "name": "@karibash/password-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple password generation helper function.",
   "keywords": [
-    "typescript"
+    "typescript",
+    "password",
+    "hash"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/.../...git"
+    "url": "git+https://github.com/Karibash/password-generator.git"
   },
-  "author": "",
+  "author": "Karibash",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/.../.../issues"
+    "url": "https://github.com/Karibash/password-generator/issues"
   },
-  "homepage": "https://github.com/.../...",
+  "homepage": "https://github.com/Karibash/password-generator",
   "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
